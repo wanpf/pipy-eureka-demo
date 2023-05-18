@@ -1,0 +1,39 @@
+{
+  "instance": {
+    "instanceId": "10.10.10.10:pipy:15001",
+    "hostName": "10.10.10.10",
+    "app": "PIPY",
+    "ipAddr": "10.10.10.10",
+    "status": "UP",
+    "overriddenstatus": "UNKNOWN",
+    "port": {
+      "$": 15001,
+      "@enabled": "true"
+    },
+    "securePort": {
+      "$": 443,
+      "@enabled": "false"
+    },
+    "countryId": 1,
+    "dataCenterInfo": {
+      "@class": "com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo",
+      "name": "MyOwn"
+    },
+    "leaseInfo": {
+      "renewalIntervalInSecs": 30,
+      "durationInSecs": 90,
+      "registrationTimestamp": 0,
+      "lastRenewalTimestamp": 0,
+      "evictionTimestamp": 0,
+      "serviceUpTimestamp": 0
+    },
+    "metadata": {
+      "@class": "java.util.Collections$EmptyMap"
+    },
+    "vipAddress": "pipy",
+    "secureVipAddress": "pipy",
+    "isCoordinatingDiscoveryServer": "false",
+    "lastUpdatedTimestamp": "1683254858888",
+    "lastDirtyTimestamp": "1683254858888"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "Ts": "2023-05-10T08:16:18.647108849Z",
+  "Spec": {
+    "Role": "service",
+    "SidecarLogLevel": "debug",
+    "Traffic": {
+      "EnableEgress": false
+    }
+  },
+  "Outbound": {
+    "TrafficMatches": {
+      "0": [
+        {
+          "DestinationIPRanges": {
+            "0.0.0.0/0": null
+          },
+          "Port": 0,
+          "Protocol": "http",
+          "HttpHostPort2Service": {},
+          "HttpServiceRouteRules": {
+            "pipy-service": {
+              "RouteRules": [
+                {
+                  "RateLimit": {
+                    "Local": {
+                      "Backlog": 10,
+                      "Requests": 10,
+                      "Burst": 20,
+                      "StatTimeWindow": 60,
+                      "ResponseStatusCode": 430,
+                      "ResponseHeadersToAdd": [
+                        {
+                          "Name": "path",
+                          "Value": "aaa"
+                        },
+                        {
+                          "Name": "test",
+                          "Value": "bbb"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "ClustersConfigs": {}
+  },
+  "AllowedEndpoints": {
+    "0.0.0.0/0": "all"
+  },
+  "Chains": {
+    "outbound-http": [
+      "modules/outbound-http-routing.js",
+      "modules/outbound-metrics-http.js",
+      "modules/outbound-tracing-http.js",
+      "modules/outbound-logging-http.js",
+      "modules/outbound-circuit-breaker.js",
+      "modules/outbound-throttle-service.js",
+      "modules/outbound-throttle-route.js",
+      "modules/outbound-http-load-balancing.js",
+      "modules/outbound-http-default.js"
+    ],
+    "outbound-tcp": [
+      "modules/outbound-tcp-routing.js",
+      "modules/outbound-tcp-load-balancing.js",
+      "modules/outbound-tcp-default.js"
+    ]
+  }
+}

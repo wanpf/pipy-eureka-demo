@@ -1,0 +1,20 @@
+{
+  "server": {
+    "ip": "192.168.122.188",
+    "port": 15001,
+    "service": "pipy-service",
+    "logLevel": "debug"
+  },
+  "eureka": {
+    "client": {
+      "serviceUrl": "http://192.168.122.1:8090/eureka"
+    },
+    "instance": {
+      "hostname": "192.168.122.188"
+    }
+  },
+  "repo": {
+    "name": "v1.3",
+    "url": "http://10.25.0.137:5050/api/v1"
+  }
+}
