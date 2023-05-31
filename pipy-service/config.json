@@ -1,5 +1,5 @@
 {
-  "Ts": "Thu May 18 09:44:01 2023",
+  "Ts": "Wed May 31 14:00:29 2023",
   "Spec": {
     "Role": "service",
     "SidecarLogLevel": "debug",
@@ -60,13 +60,19 @@
     "ClustersConfigs": {
       "192.168.122.188:pipy-service:15001/EMPLOYEE-PRODUCER": {
         "Endpoints": {
-          "192.168.122.82:8010": {
+          "192.168.122.82:8011": {
             "Weight": 100,
             "ShiftPath": true,
             "Http": "employee-producer",
             "Https": "employee-producer"
           },
-          "192.168.122.82:8080": {
+          "192.168.122.82:8012": {
+            "Weight": 100,
+            "ShiftPath": true,
+            "Http": "employee-producer",
+            "Https": "employee-producer"
+          },
+          "192.168.122.82:8013": {
             "Weight": 100,
             "ShiftPath": true,
             "Http": "employee-producer",
@@ -97,5 +103,5 @@
       "modules/outbound-tcp-default.js"
     ]
   },
-  "Version": 1684374241832
+  "Version": 1685512829320
 }
