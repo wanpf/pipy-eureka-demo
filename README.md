@@ -29,6 +29,13 @@ b）运行 pipy eureka-agent/main.js
 # 3.6 运行 consumer 微服务  
 使用 jdk1.8 版本，运行 spring-projects/jar/eureka-employee-consumer/run.bat (windows 脚本）  
 
+# 4. 查看演示效果  
+a）consumer 通过 pipy service 作为服务网关 访问 producer 服务，实现了负载均衡  
+<img width="689" alt="image" src="https://github.com/wanpf/pipy-eureka-demo/assets/2276200/9d9b43c8-b3e8-48bb-9b36-6fe287efbcd9">  
+b）consumer 通过 pipy service 作为服务网关 访问 producer 服务，实现了限流
+<img width="678" alt="image" src="https://github.com/wanpf/pipy-eureka-demo/assets/2276200/4c641838-7144-4729-919d-83c57dc6dba5">  
+<img width="789" alt="image" src="https://github.com/wanpf/pipy-eureka-demo/assets/2276200/9c4c7a02-290e-4ff5-96d2-7e7bb1936a32">
 
-
-
+# 5. 总结  
+demo演示了使用 pipy 作为spring cloud的微服务网关，提供了服务治理能力  
+实现了服务的负载均衡、访问限流  
