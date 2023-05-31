@@ -14,7 +14,7 @@
     }
   },
   "repo": {
-    "name": "v1.3",
+    "name": "pipy-service",
     "url": "http://10.25.0.137:5050/api/v1"
   }
 }
